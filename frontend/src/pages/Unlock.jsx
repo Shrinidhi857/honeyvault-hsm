@@ -21,7 +21,6 @@ export default function Unlock() {
     const [hasVault, setHasVault]         = useState(null);
     const [awaitingGate, setAwaitingGate] = useState(false);
     const [countdown, setCountdown]       = useState(10);
-    const [simPressed, setSimPressed]     = useState(false);
     const [showPass, setShowPass]         = useState(false);
 
     const { setEntries, setIsReal, setUnlocked } = useVault();
@@ -48,19 +47,11 @@ export default function Unlock() {
         return () => clearInterval(timerRef.current);
     }, [awaitingGate, hw]);
 
-    async function handleSimulate() {
-        if (simPressed) return;
-        setSimPressed(true);
-        try { await axios.post("/api/demo/press-button", {}, { withCredentials: true }); }
-        catch (_) {}
-    }
-
     async function handleSubmit(e) {
         e.preventDefault();
         setLoading(true);
         setError("");
         setAwaitingGate(true);
-        setSimPressed(false);
 
         try {
             const res = await axios.post(
@@ -146,20 +137,9 @@ export default function Unlock() {
 
                         <p className="gate-label">seconds remaining</p>
 
-                        <div className={`gate-mode-badge ${hw?.gpio_available ? "badge-green" : "badge-yellow"}`}>
-                            {hw?.gpio_available ? "🟢 Real GPIO — Raspberry Pi" : "🟡 Simulated — PC Dev Mode"}
+                        <div className="gate-mode-badge badge-green">
+                            🟢 GPIO 17 Button Gate Active
                         </div>
-
-                        {!hw?.gpio_available && (
-                            <button
-                                id="simulate-btn"
-                                className={`btn btn-purple btn-simulate ${simPressed ? "btn-pressed" : ""}`}
-                                onClick={handleSimulate}
-                                disabled={simPressed}
-                            >
-                                {simPressed ? "✅ Button Press Sent" : "🖱 Simulate Button Press (PC Testing)"}
-                            </button>
-                        )}
 
                         <p className="gate-wire-hint">
                             Wiring: <code>GPIO 17</code> → Tactile Button → <code>GND</code>

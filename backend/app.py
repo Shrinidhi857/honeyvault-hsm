@@ -21,7 +21,7 @@ from database import (
     log_action, get_audit_log,
     create_vault_meta, update_vault_meta, get_vault_meta,
 )
-from hardware import wait_for_button_press, press_mock_button, HAS_GPIO
+from hardware import wait_for_button_press, HAS_GPIO
 
 # ---------------------------------------------------------------------------
 # App setup
@@ -85,11 +85,6 @@ def hardware_status():
         timeout_seconds=BUTTON_TIMEOUT,
     )
 
-@app.post('/api/demo/press-button')
-def simulate_button():
-    """PC testing only -- simulate a physical GPIO button press."""
-    press_mock_button()
-    return jsonify(status='pressed', message='Mock hardware button press triggered.')
 
 # ---------------------------------------------------------------------------
 # Vault routes
