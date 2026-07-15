@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2026-05-16T15:46:37.489546",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457",
+    "password_used": "wrongpassword"
+  },
+  {
+    "timestamp": "2026-05-16T15:46:48.136420",
+    "ref": "brute_force_demo",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.8457",
+    "password_used": "admin123"
+  },
+  {
+    "timestamp": "2026-05-17T12:33:44.892952",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": " CorrectHorse@99"
+  },
+  {
+    "timestamp": "2026-05-17T12:41:26.114762",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": "sdfg"
+  },
+  {
+    "timestamp": "2026-05-17T12:49:47.395691",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": "SecretPassword123!"
+  },
+  {
+    "timestamp": "2026-05-17T12:50:16.989925",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": " CorrectHorse@99"
+  },
+  {
+    "timestamp": "2026-05-17T12:52:14.449369",
+    "ref": "vault_unlock",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": "sdfghj"
+  },
+  {
+    "timestamp": "2026-05-17T12:52:28.222551",
+    "ref": "brute_force_demo",
+    "ip": "127.0.0.1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+    "password_used": "admin123"
+  }
+]

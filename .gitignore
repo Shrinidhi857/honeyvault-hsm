@@ -1,0 +1,38 @@
+# Combined .gitignore for backend (Python) and frontend (Node/Vite)
+
+# --- Global ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# --- Python backend ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+.env.*
+.pytest_cache/
+.mypy_cache/
+/backend/build/
+*.egg-info/
+pip-wheel-metadata/
+honeyvault.enc
+
+# --- Node / Frontend ---
+node_modules/
+/frontend/dist/
+/frontend/build/
+.vite/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.cache/
+
+# --- Misc ---
+#.DS_Store already listed
+Thumbs.db

@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #0f0f13;
+  --bg-card: #1a1a24;
+  --bg-hover: #22222f;
+  --border: rgba(255, 255, 255, 0.08);
+  --purple: #7c6ff7;
+  --purple-dim: #4a3fa8;
+  --green: #22c55e;
+  --red: #ef4444;
+  --yellow: #eab308;
+  --text: #e2e2f0;
+  --muted: #6b7280;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.btn-purple {
+  background: var(--purple);
+  color: #fff;
+}
+
+.btn-purple:hover {
+  background: #6a5ef0;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-hover);
+}
+
+.btn-red {
+  background: var(--red);
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #dc2626;
+}
+
+.btn-green {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 13px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-input:focus {
+  border-color: var(--purple);
+}
+
+.form-input::placeholder {
+  color: var(--muted);
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.badge-green {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-red {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--red);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-purple {
+  background: rgba(124, 111, 247, 0.15);
+  color: var(--purple);
+  border: 1px solid rgba(124, 111, 247, 0.3);
+}
+
+.badge-yellow {
+  background: rgba(234, 179, 8, 0.15);
+  color: var(--yellow);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+/* Mono font for passwords */
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+/* Alert */
+.alert {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.alert-red {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--red);
+}
+
+.alert-green {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--green);
+}
+
+.alert-yellow {
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  color: var(--yellow);
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+/* Utilities */
+.text-muted {
+  color: var(--muted);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.w-full {
+  width: 100%;
+}
+/* =========================================================================
+   PHYSICAL PRESENCE GATE — Unlock Page Styles
+   ========================================================================= */
+
+/* Page wrapper */
+.unlock-page {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(ellipse at 50% 0%, rgba(124, 111, 247, 0.08) 0%, transparent 65%);
+}
+
+.unlock-center {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.unlock-header {
+  text-align: center;
+}
+
+.lock-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(124, 111, 247, 0.12);
+  border: 1px solid rgba(124, 111, 247, 0.25);
+  margin-bottom: 1rem;
+  animation: icon-breathe 3s ease-in-out infinite;
+}
+
+@keyframes icon-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124, 111, 247, 0.2); }
+  50%       { box-shadow: 0 0 0 14px rgba(124, 111, 247, 0); }
+}
+
+.lock-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.unlock-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.unlock-subtitle {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* ── Gate Overlay ── */
+.gate-overlay {
+  background: var(--bg-card);
+  border: 1px solid rgba(124, 111, 247, 0.35);
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 0 40px rgba(124, 111, 247, 0.15);
+  animation: gate-slide-in 0.35s ease;
+}
+
+@keyframes gate-slide-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Pulsing rings around button icon */
+.gate-pulse-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.gate-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 111, 247, 0.5);
+  animation: ring-expand 2.4s ease-out infinite;
+}
+
+.ring-1 { width: 100%; height: 100%; animation-delay: 0s; }
+.ring-2 { width: 80%;  height: 80%;  animation-delay: 0.4s; }
+.ring-3 { width: 60%;  height: 60%;  animation-delay: 0.8s; }
+
+@keyframes ring-expand {
+  0%   { opacity: 0.7; transform: scale(0.8); }
+  100% { opacity: 0;   transform: scale(1.5); }
+}
+
+.gate-btn-icon {
+  font-size: 2.4rem;
+  z-index: 2;
+  filter: drop-shadow(0 0 12px rgba(124, 111, 247, 0.8));
+}
+
+/* Circular countdown SVG */
+.gate-countdown {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.countdown-svg {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.countdown-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 5;
+}
+
+.countdown-fill {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.95s linear;
+}
+
+.countdown-number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--purple);
+}
+
+.gate-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: -0.5rem;
+}
+
+.gate-mode-badge {
+  padding: 4px 14px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.btn-simulate {
+  margin-top: 0.25rem;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-pressed {
+  background: var(--green) !important;
+  pointer-events: none;
+}
+
+.gate-wire-hint {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+}
+
+.gate-wire-hint code {
+  color: var(--purple);
+  background: rgba(124, 111, 247, 0.1);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* ── Gate Info Panel (on login card) ── */
+.gate-info-panel {
+  background: rgba(124, 111, 247, 0.04);
+  border: 1px solid rgba(124, 111, 247, 0.12);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gate-info-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.gate-info-icon {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.gate-info-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.gate-info-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── Spinner ── */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(124, 111, 247, 0.2);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
