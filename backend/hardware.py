@@ -16,9 +16,9 @@ if HAS_GPIO:
     try:
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
-        # Internal pull-up: pin reads HIGH normally, LOW when button pressed to GND
-        GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        logger.info("GPIO 17 configured as INPUT with PULL_UP.")
+        # Pull-down: pin reads LOW normally, HIGH when button pressed to 3.3V
+        GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+        logger.info("GPIO 17 configured as INPUT with PULL_DOWN.")
     except Exception as exc:
         logger.error(f"GPIO init failed: {exc}")
         HAS_GPIO = False
@@ -52,8 +52,8 @@ def wait_for_button_press(timeout=10.0) -> bool:
         logger.info(f"Hardware gate OPEN — waiting {timeout}s for button on GPIO {BUTTON_PIN}...")
         while time.time() < deadline:
             try:
-                if GPIO.input(BUTTON_PIN) == GPIO.LOW:
-                    logger.info("Physical button press confirmed on GPIO 17.")
+                if GPIO.input(BUTTON_PIN) == GPIO.HIGH:
+                    logger.info("Physical button press confirmed on GPIO 17 (HIGH).")
                     return True
             except Exception as exc:
                 logger.error(f"GPIO read error: {exc}")
